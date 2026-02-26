@@ -13,12 +13,12 @@ class AuthDatabaseHandler {
     private readonly string $login;
     private readonly string $mdp;
     
-//database connexion for BD_equipe with admin account
+//database connexion for BD_auth with admin account
     private function __construct(){
         try{
             $this->server = "mysql-mathmams.alwaysdata.net";
-            $this->db = "mathmams_bd_r401";
-            $this->login = "mathmams_admin";
+            $this->db = "mathmams_bd_r401_auth";
+            $this->login = "mathmams_admin";   //account may change
             $this->mdp = "rootpwd";
             $this->linkpdo=new PDO("mysql:host=".$this->server.";dbname=".$this->db,$this->login,$this->mdp);
         }catch(Exception $e){

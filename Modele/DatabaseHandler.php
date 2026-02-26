@@ -12,7 +12,8 @@ class DatabaseHandler {
     private readonly string $db;
     private readonly string $login;
     private readonly string $mdp;
-
+    
+//database connexion for BD_equipe with admin account
     private function __construct(){
         try{
             $this->server = "mysql-mathmams.alwaysdata.net";

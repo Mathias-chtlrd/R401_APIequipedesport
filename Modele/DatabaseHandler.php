@@ -1,6 +1,6 @@
 <?php
 
-namespace R301\Modele;
+namespace R401_APIequipedesport\Modele; 
 
 use Exception;
 use PDO;
@@ -15,10 +15,10 @@ class DatabaseHandler {
 
     private function __construct(){
         try{
-            $this->server = "localhost";
-            $this->db = "r301";
-            $this->login = "r301";
-            $this->mdp = "7z3AgWdX54Zkq5!";
+            $this->server = "mysql-mathmams.alwaysdata.net";
+            $this->db = "mathmams_bd_r401";
+            $this->login = "mathmams_admin";
+            $this->mdp = "rootpwd";
             $this->linkpdo=new PDO("mysql:host=".$this->server.";dbname=".$this->db,$this->login,$this->mdp);
         }catch(Exception $e){
             die("Erreur : ".$e->getMessage());

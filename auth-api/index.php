@@ -15,13 +15,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $input['username'] ?? '';
     $password = $input['password'] ?? '';
 
-    // ✅ IDENTIFIANTS FIXES (pas de BDD)
     if ($username === 'admin' && $password === 'admin') {
         $token = bin2hex(random_bytes(32));
         echo json_encode([
             'token' => $token,
             'user' => $username,
-            'expires' => date('Y-m-d H:i:s', strtotime('+1 hour'))
+            'expires' => date('d-m-Y H:i:s', strtotime('+1 hour'))
         ]);
         exit();
     }
